@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js"></script>
+    <script src="javascript.js"></script>
+</head>
+
+<body class="body1">
+
+    <div class="body">
+
+        <div class="block">
+        </div>
+        <div class="headergap">
+            <div class="ball">
+                <img class="ball_img" src="icon/headerball.png" />
+                <div class="ball_font">Pokémon</div>
+            </div>
+            <div class="header_right">
+                <div style="left: 0%;" class="header_font"> 寶可夢圖鑑</div>
+                <div style="left: 25%;" class="header_font"> 屬性剋制表</div>
+                <div style="left: 50%;" class="header_font"> 聯絡我們</div>
+                <div style="left: 75%;" class="header_font">官方網站</div>
+            </div>
+        </div>
+        <div class="slideshow" id="slideImgs"></div>
+        <div style="color: #D8E0FF; font-size: 36px; font-family: Beau Rivage; font-weight: 400; word-wrap: break-word">
+            屬性剋制表</div>
+        <div
+            style="width: 30%; height: 12%; background: rgba(124.43, 155.30, 203.15, 0.50); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px; border: 3px #ADC4F1 solid ;left:3%;position: relative;">
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Normal">Normal</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Fire">Fire</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Water">Water</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Grass">Grass</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Electric">Electric</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Ice">Ice</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Fighting">Fighting</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Poison">Poison</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Ground">Ground</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Flying">Flying</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Psychic">Psychic</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Bug">Bug</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Rock">Rock</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Ghost">Ghost</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Dragon">Dragon</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Dark">Dark</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Steel">Steel</span>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button Fairy">Fairy</span>
+            </div>
+        </div>
+        <div style="color: #D8E0FF; font-size: 36px; font-family: Beau Rivage; font-weight: 400; word-wrap: break-word">
+            寶可夢圖鑑
+            <button onclick="showpokedex1()" class="button">random</button>
+            <form class="search-box" onsubmit="getInputValue(); return false;">
+                <input type="text" id="Input" placeholder=" " />
+                <button type="reset"></button>
+            </form>
+            <button onclick="getInputValue()" class="searchbutton">search</button>
+        </div>
+        <div class="pokedex1">
+            <div class="rec">
+            </div>
+            <div class="imggroup">
+                <div class="img1 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img2 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img3 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img4 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="pokedex2">
+            <div class="rec">
+            </div>
+            <div class="imggroup">
+                <div class="img1 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img2 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img3 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img4 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="pokedex3">
+            <div class="rec">
+            </div>
+            <div class="imggroup">
+                <div class="img1 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img2 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img3 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+                <div class="img4 img">
+                    <div class="imgbackgroung">
+                    </div>
+                    <a class="imghref" href=""><img class="imgsrc" src="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

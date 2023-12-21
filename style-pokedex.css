@@ -1,0 +1,152 @@
+body {
+    width: 100%;
+    height: 1500px;
+    background: rgba(60, 79, 108, 0.70);
+    font-family: Kalam;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+}
+
+.ball {
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    display: flex
+}
+
+.ball_img {
+    width: 70px;
+    height: 70px
+}
+
+.ball_font {
+    color: #D8E0FF;
+    font-size: 50px;
+    font-family: Kalam;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.header_right {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.header_font {
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Beau Rivage;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.headergap {
+    width: 100%;
+    height: 80px;
+    top: 7px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    display: inline-flex
+}
+
+.block {
+    transform: translate(0, -30px);
+    width: 100%;
+    height: 135px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: rgba(83.45, 108.37, 145.76, 0.72);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 3px #ADC4F1 solid
+}
+
+#speciesimg {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+}
+.no-wrap{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-end;
+}
+.AbilityValue {
+    position: relative;
+    left: 45%;
+    width: fit-content;
+}
+.box{
+    width: 80px;
+    background-color: #393939;
+    color: white;
+    text-align: center;
+}
+.box2{
+    width: 80px;
+    background-color: #575757;
+    color: white;
+    text-align: center;
+}
+.NameId{
+    position: relative;
+    top:15%;
+    left:70%;
+    width: fit-content;
+
+}
+#HP {
+    height: 20px;
+    background-color: #79C765;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+#Attack {
+    height: 20px;
+    background-color: #D3C579;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+#Defense {
+    height: 20px;
+    background-color: #C58A53;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+#SpAttack {
+    height: 20px;
+    background-color: #73A7CC;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+#SpDefense {
+    height: 20px;
+    background-color: #4838AA;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+#Speed {
+    height: 20px;
+    background-color: #8151A6;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
