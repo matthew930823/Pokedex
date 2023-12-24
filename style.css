@@ -481,10 +481,15 @@ button:hover {
 
 .toggle {
     position: relative;
-    height: calc(100%/7);
+    height: calc(100%/8);
     width: calc(100%/3.3);
 }
-
+.toggletext{
+    font-family: kalam;
+    height: calc(100%/15);
+    width: 100%;
+    text-align: center;
+}
 .toggle:before {
     box-shadow: 0;
     border-radius: 84.5px;
@@ -501,7 +506,7 @@ button:hover {
 
 .toggle .button {
     transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+    /* box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2); */
     border-radius: 68.8px;
     position: absolute;
     margin-left: 0px;
@@ -531,113 +536,116 @@ button:hover {
 
 .toggle input:checked~.button {
     filter: blur(0.5px);
-    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 25px -1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4), inset 0 0px 15px -1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
 }
 .Normal{
-    color: #dcdcdc;
+    color: black;
     border-color: #dcdcdc;
     background: #dcdcdc50;
     text-align: center;
 }
 .Fire{
-    color: #ff6900;
+    color: black;
     border-color: #ff6900;
     background: #ff690050;
     text-align: center;
 }
 .Water{
-    color: #14b9ff;
+    color: black;
     border-color: #14b9ff;
     background: #14b8ff50;
     text-align: center;
 }
 .Grass{
-    color: #b4f000;
+    color: black;
     border-color: #b4f000;
     background: #b4f00050;
     text-align: center;
 }
 .Electric{
-    color: #ffe100;
+    color: black;
     border-color: #ffe100;
     background: #ffe10050;
     text-align: center;
 }
 .Ice{
-    color: #14f5ff;
+    color: black;
     border-color: #14f5ff;  
     background: #14f5ff50;
     text-align: center;
 }
 .Fighting{
-    color: #dc6900;
+    color: black;
     border-color: #dc6900;
     background: #dc690050;
     text-align: center;
 }
 .Poison{
-    color: #ca5aca;
+    color: black;
     border-color: #d28cd2;
     background: #d28cd250;
     text-align: center;
 }
 .Ground{
-    color: #fac85a;
+    color: black;
     border-color: #fac85a;
     background: #fac85a50;
     text-align: center;
 }
 .Flying{
-    color: #78dcff;
+    color: black;
     border-color: #78dcff;
     background: #78dcff50;
     text-align: center;
 }
 .Psychic{
-    color: #f08cdc;
+    color: black;
     border-color: #f08cdc;
     background: #f08cdc50;
     text-align: center;
 }
 .Bug{
-    color: #258125;
+    color: black;
     border-color: #46c846;
     background: #46c84650;
     text-align: center;
 }
 .Rock{
-    color: #b48c64;
+    color: black;
     border-color: #b48c64;
     background: #b48c6450;
     text-align: center;
 }
 .Ghost{
-    color: #3d2d8c;
+    color: black;
     border-color: #a08cff;
     background: #a08cff50;
     text-align: center;
 }
 .Dragon{
-    color: #5078dc;
+    color: black;
     border-color: #5078dc;
     background: #5078dc50;
     text-align: center;
 }
 .Dark{
-    color: #787878;
+    color: black;
     border-color: #787878;
     background: #78787850;
     text-align: center;
 }
 .Steel{
-    color: #aac8f0;
+    color: black;
     border-color: #aac8f0;
     background: #aac8f050;
     text-align: center;
 }
 .Fairy{
-    color: #ffafdc;
+    color: black;
     border-color: #ffafdc;
     background: #ffafdc50;
     text-align: center;
+}
+#hide{
+    display: none;
 }
