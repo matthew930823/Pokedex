@@ -67,7 +67,7 @@ function start() {
     let img = document.getElementById("slideImgs");
     for (var i = 1; i <= 20; i++) {
         x = Math.floor(Math.random() * 809 + 1);
-        img.innerHTML += '<img src=images/' + String(x).padStart(3, "0") + '.png>'
+        img.innerHTML += '<a href="species.html?species='+x+'">'+'<img src=images/' + String(x).padStart(3, "0") + '.png></a>'
     }
     showpokedex1();
     checktype();
@@ -194,7 +194,7 @@ function checktype() {
     var arr = new Array();
     var button = document.querySelectorAll(".button");
     console.log(button.length)
-    for (var i = 18; i < button.length; i++) {
+    for (var i = 18; i < button.length-1; i++) {
         button[i].id = "hide";
     }
     // 添加 onchange 事件监听器
@@ -298,7 +298,7 @@ function checktype() {
             console.log("*0 " + inval);
             var button = document.querySelectorAll(".button");
             console.log(button.length)
-            for (var i = 18; i < button.length; i++) {
+            for (var i = 18; i < button.length-1; i++) {
                 button[i].id = "hide";
             }
             for (var i = 0; i < double.length; i++) {

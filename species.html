@@ -14,103 +14,163 @@
         <div class="block">
         </div>
         <div class="headergap">
-            <div class="ball">
-                <img class="ball_img" src="icon/headerball.png" />
-                <div class="ball_font">Pokémon</div>
-            </div>
+            <a href="home.html" style="z-index: 1; text-decoration: none;">
+                <div class="ball">
+                    <img class="ball_img" src="icon/headerball.png" />
+                    <div class="ball_font">Pokémon</div>
+                </div>
+            </a>
             <div class="header_right">
-                <div style="left: 0%;" class="header_font"> 寶可夢圖鑑</div>
-                <div style="left: 25%;" class="header_font"> 屬性剋制表</div>
-                <div style="left: 50%;" class="header_font"> 聯絡我們</div>
-                <div style="left: 75%;" class="header_font">官方網站</div>
+                <a href="home.html#type">
+                    <div style="left: 0%;" class="header_font"> 寶可夢圖鑑</div>
+                </a>
+                <a href="home.html#pokedex">
+                    <div style="left: 25%;" class="header_font"> 屬性剋制表</div>
+                </a>
+                <a href="mailto:matthew930823@gmail.com">
+                    <div style="left: 50%;" class="header_font"> 聯絡我們</div>
+                </a>
+                <a href="https://tw.portal-pokemon.com/play/pokedex" target="_blank">
+                    <div style="left: 75%;" class="header_font">官方網站</div>
+                </a>
             </div>
         </div>
-        <img id="speciesimg" src="">
-        <div class="NameId">
-            <h2 id="speciesID"></h2>
-            <p id="speciesName"></p>
-            <p id="type">type : </p>
-            <p id="weakness">weakness : </p>
+        <div style="width: 100%;height: 50%;;position: relative; top:10%; ">
+            <div class="Previous">
+                <a href="" id="Previous" style="text-decoration: none; color:black">
+                    <img src="arrow.png">
+                    <!-- <p id="PreviousID" style="margin-bottom: 0;margin-top: 0;"></p>
+                    <h2 id="PreviousName" style="margin-bottom: 0;margin-top: 0;"></h2> -->
+                </a>
+            </div>
+            <div class="NameId">
+                <h2 id="speciesName" style="margin-bottom: 0;margin-top: 0;"></h2>
+            </div>
+
+            <div class="Next">
+                <a href="" id="Next" style="text-decoration: none;color:black">
+                    <img src="arrow.png">
+                    <!-- <p id="NextID" style="margin-bottom: 0;margin-top: 0;"></p>
+                    <h2 id="NextName" style="margin-bottom: 0;margin-top: 0;"></h2> -->
+                </a>
+            </div>
+            <img id="speciesimg" src="">
+            <p id="speciesID" class="ID"></p>
+            <div class="AbilityValue">
+                <div class="HP no-wrap" style="width: 100%;">
+                    <div class="box">
+                        HP
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="HP">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="HPvalue">
+
+                    </div>
+                </div>
+                <div class="Attack no-wrap">
+                    <div class="box">
+                        Attack
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="Attack">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="Attackvalue">
+
+                    </div>
+                </div>
+                <div class="Defense no-wrap">
+                    <div class="box">
+                        Defense
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="Defense">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="Defensevalue">
+
+                    </div>
+                </div>
+                <div class="SpAttack no-wrap">
+                    <div class="box">
+                        SpAttack
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="SpAttack">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="SpAttackvalue">
+
+                    </div>
+                </div>
+                <div class="SpDefense no-wrap">
+                    <div class="box">
+                        SpDefense
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="SpDefense">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="SpDefensevalue">
+
+                    </div>
+                </div>
+                <div class="Speed no-wrap">
+                    <div class="box">
+                        Speed
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="Speed">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="Speedvalue">
+
+                    </div>
+                </div>
+                <div class="Total no-wrap">
+                    <div class="box">
+                        Total
+                    </div>
+                    <div style="width:70%">
+                        <div class="value" id="Total">
+
+                        </div>
+                    </div>
+                    <div class="box2" id="Totalvalue">
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="AbilityValue">
-            <div class="HP no-wrap">
-                <div class="box">
-                    HP
-                </div>
-                <div style="width:200px">
-                    <div class="value" id="HP">
 
-                    </div>
-                </div>
-                <div class="box2" id="HPvalue">
 
+        <div class="typebox">
+            <p id="type" class="nomargin">type :</p>
+        </div>
+        <div class="typebox">            
+            <p id="weakness" class="nomargin">weakness : </p>
+        </div>
+        <div class="footer">
+            <div class="footer_text">
+                <div class="OfficialWebsite">Official Website
+                    <a href="https://www.instagram.com/pokemon_taiwan/" target="_blank"><img src="icon/ig.png" class="iconimg"></a>
+                    <a href="https://www.facebook.com/Pokemon.Official.Taiwan/" target="_blank"><img src="icon/fb.png" class="iconimg"></a>
+                    <a href="https://www.youtube.com/channel/UCUsB9KTwSGgPlIARzdaKb_Q" target="_blank"><img src="icon/yt.png" class="iconimg"></a>
+                </div>
+                <div class="ContactUs">Contact Us
+                    <a href="https://www.instagram.com/matthew930823/" target="_blank"><img src="icon/ig.png" class="iconimg2" ></a>
+                    <a href="mailto:matthew930823@gmail.com"><img src="icon/mail.png" class="iconimg"></a>
                 </div>
             </div>
-            <div class="Attack no-wrap">
-                <div class="box">
-                    Attack
-                </div>
-                <div style="width:200px">
-                    <div class="value" id="Attack">
 
-                    </div>
-                </div>
-                <div class="box2" id="Attackvalue">
-
-                </div>
-            </div>
-            <div class="Defense no-wrap">
-                <div class="box">
-                    Defense
-                </div>
-                <div style="width:200px">
-                    <div class="value" id="Defense">
-
-                    </div>
-                </div>
-                <div class="box2" id="Defensevalue">
-
-                </div>
-            </div>
-            <div class="SpAttack no-wrap">
-                <div class="box">
-                    SpAttack
-                </div>
-                <div style="width:200px">
-                    <div class="value" id="SpAttack">
-
-                    </div>
-                </div>
-                <div class="box2" id="SpAttackvalue">
-
-                </div>
-            </div>
-            <div class="SpDefense no-wrap">
-                <div class="box">
-                    SpDefense
-                </div>
-                <div style="width:200px">
-                    <div class="value" id="SpDefense">
-
-                    </div>
-                </div>
-                <div class="box2" id="SpDefensevalue">
-
-                </div>
-            </div>
-            <div class="Speed no-wrap">
-                <div class="box">
-                    Speed
-                </div>
-                <div style="width:200px">
-                    <div class="value" id="Speed">
-
-                    </div>
-                </div>
-                <div class="box2" id="Speedvalue">
-
-                </div>
-            </div>
         </div>
     </div>
 
