@@ -34,13 +34,14 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
+    z-index: 1;
 }
 
 .header_font {
-    top: 0px;
+    top: 20%;
     position: absolute;
-    color: white;
-    font-size: 20px;
+    color: #D8E0FF;
+    font-size: 22px;
     font-family: Beau Rivage;
     font-weight: 400;
     word-wrap: break-word;
@@ -72,81 +73,326 @@ body {
 }
 
 #speciesimg {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    height: 50%;
-    width: 100%;
+    position: relative;
+    display: inline;
+    top: 37%;
+    left: -8%;
+    height: 60%;
     transform: translate(-50%, -50%);
-    width: fit-content;
+    background-color: #bac4da77;
+    border: 5px #bac4da77 solid;
+    border-radius: 40%;
 }
-.no-wrap{
+
+.no-wrap {
     display: flex;
     margin-bottom: 15px;
     align-items: flex-end;
 }
-.AbilityValue {
-    position: relative;
-    left: 45%;
-    width: fit-content;
-}
-.box{
-    width: 80px;
+
+
+.box {
+    width: 20%;
     background-color: #393939;
     color: white;
     text-align: center;
 }
-.box2{
-    width: 80px;
+
+.box2 {
+    width: 10%;
     background-color: #575757;
     color: white;
     text-align: center;
 }
-.NameId{
-    position: relative;
-    top:15%;
-    left:70%;
-    width: fit-content;
 
+.Previous {
+    position: relative;
+    margin-left: 2%;
+    width: fit-content;
+    text-align: center;
+    /* background-color: #ADC4F1;
+    border-top-right-radius: 10px; */
+    float: left;
+    display: inline-block;
+    top: 35%;
 }
+
+.NameId {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 32px;
+    color: white;
+    /* background-color: #c0cde7; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+    left: 40%;
+    top: -58%;
+    transform: translate(-50%, -0%);
+}
+
+.ID {
+    margin-bottom: 0;
+    margin-top: 0;
+    left: 40%;
+    position: relative;
+    font-size: 70px;
+    width: fit-content;
+    top: -7%;
+    color: #3a4665;
+}
+
+.Next {
+    position: relative;
+    margin-right: 2%;
+    width: fit-content;
+    text-align: center;
+    /* background-color: #ADC4F1;
+    border-top-left-radius: 10px; */
+    display: inline-block;
+    float: right;
+    transform: scaleX(-1);
+    top: 35%;
+}
+
+.typebox {
+    position: relative;
+    top: 0%;
+    left: 13%;
+    width: fit-content;
+    font-size: 24px;
+    background-color: #BDC2F45C;
+    padding:1.5%;
+    border-radius: 10%;
+    margin-bottom: 2%;
+}
+.nomargin{
+    margin: 0;
+}
+.typebox_word{
+    border-radius: 20%;
+}
+.AbilityValue {
+    position: relative;
+    top: -67%;
+    left: 50%;
+    width: 40%;
+    background-color: #656F8E5C;
+    border: 20px #656F8E5C solid;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    font-size: 24px;
+}
+
 #HP {
-    height: 20px;
+    height: 25px;
     background-color: #79C765;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 10px;
 }
 
 #Attack {
-    height: 20px;
+    height: 25px;
     background-color: #D3C579;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 10px;
 }
 
 #Defense {
-    height: 20px;
+    height: 25px;
     background-color: #C58A53;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 10px;
 }
 
 #SpAttack {
-    height: 20px;
+    height: 25px;
     background-color: #73A7CC;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 10px;
 }
 
 #SpDefense {
-    height: 20px;
+    height: 25px;
     background-color: #4838AA;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 10px;
 }
 
 #Speed {
-    height: 20px;
+    height: 25px;
     background-color: #8151A6;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 10px;
+}
+
+#Total {
+    height: 25px;
+    background-color: #d72929;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+.Normal {
+    color: black;
+    border-color: #dcdcdc;
+    background: #dcdcdcc0;
+    text-align: center;
+}
+
+.Fire {
+    color: black;
+    border-color: #ff6900;
+    background: #ff6900c0;
+    text-align: center;
+}
+
+.Water {
+    color: black;
+    border-color: #14b9ff;
+    background: #14b8ffc0;
+    text-align: center;
+}
+
+.Grass {
+    color: black;
+    border-color: #b4f000;
+    background: #b4f000c0;
+    text-align: center;
+}
+
+.Electric {
+    color: black;
+    border-color: #ffe100;
+    background: #ffe100c0;
+    text-align: center;
+}
+
+.Ice {
+    color: black;
+    border-color: #14f5ff;
+    background: #14f5ffc0;
+    text-align: center;
+}
+
+.Fighting {
+    color: black;
+    border-color: #dc6900;
+    background: #dc6900c0;
+    text-align: center;
+}
+
+.Poison {
+    color: black;
+    border-color: #d28cd2;
+    background: #d28cd2c0;
+    text-align: center;
+}
+
+.Ground {
+    color: black;
+    border-color: #fac85a;
+    background: #fac85ac0;
+    text-align: center;
+}
+
+.Flying {
+    color: black;
+    border-color: #78dcff;
+    background: #78dcffc0;
+    text-align: center;
+}
+
+.Psychic {
+    color: black;
+    border-color: #f08cdc;
+    background: #f08cdcc0;
+    text-align: center;
+}
+
+.Bug {
+    color: black;
+    border-color: #46c846;
+    background: #46c846c0;
+    text-align: center;
+}
+
+.Rock {
+    color: black;
+    border-color: #b48c64;
+    background: #b48c64c0;
+    text-align: center;
+}
+
+.Ghost {
+    color: black;
+    border-color: #a08cff;
+    background: #a08cffc0;
+    text-align: center;
+}
+
+.Dragon {
+    color: black;
+    border-color: #c078dc;
+    background: #5078dcc0;
+    text-align: center;
+}
+
+.Dark {
+    color: black;
+    border-color: #787878;
+    background: #787878c0;
+    text-align: center;
+}
+
+.Steel {
+    color: black;
+    border-color: #aac8f0;
+    background: #aac8f0c0;
+    text-align: center;
+}
+
+.Fairy {
+    color: black;
+    border-color: #ffafdc;
+    background: #ffafdcc0;
+    text-align: center;
+}
+.footer {
+    transform: translate(0, -30px);
+    width: 100%;
+    height: 265px;
+    left: 0px;
+    top: 1500px ;
+    position: absolute;
+    background: rgba(83.45, 108.37, 145.76, 0.72);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 3px #ADC4F1 solid
+}
+.footer_text{
+    width: fit-content;
+    color: white;
+    font-size: 24px;
+}
+.OfficialWebsite{
+    position: absolute;
+    top:20%;
+    left: 10%;
+}
+.ContactUs{
+    position: absolute;
+    top:45%;
+    left: 10%;
+}
+.iconimg{
+    margin-left: 10px;
+    height: 35px;
+}
+.iconimg2{
+    margin-left: 55px;
+    height: 35px;
 }

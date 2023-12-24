@@ -1,6 +1,7 @@
 body {
     width: 100%;
     height: 3121px;
+    font-family: Kalam;
     background: rgba(60, 79, 108, 0.70);
 }
 
@@ -13,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    display: flex
+    display: flex;
 }
 
 .ball_img {
@@ -33,13 +34,14 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
+    z-index: 1;
 }
 
 .header_font {
-    top: 0px;
+    top: 20%;
     position: absolute;
-    color: white;
-    font-size: 20px;
+    color: #D8E0FF;
+    font-size: 22px;
     font-family: Beau Rivage;
     font-weight: 400;
     word-wrap: break-word;
@@ -69,7 +71,42 @@ body {
     border-bottom-right-radius: 50px;
     border: 3px #ADC4F1 solid
 }
-
+.footer {
+    transform: translate(0, -30px);
+    width: 100%;
+    height: 265px;
+    left: 0px;
+    top: 3121px;
+    position: absolute;
+    background: rgba(83.45, 108.37, 145.76, 0.72);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 3px #ADC4F1 solid
+}
+.footer_text{
+    width: fit-content;
+    color: white;
+    font-size: 24px;
+}
+.OfficialWebsite{
+    position: absolute;
+    top:20%;
+    left: 10%;
+}
+.ContactUs{
+    position: absolute;
+    top:45%;
+    left: 10%;
+}
+.iconimg{
+    margin-left: 10px;
+    height: 35px;
+}
+.iconimg2{
+    margin-left: 55px;
+    height: 35px;
+}
 .information {
     display: inline-flex;
     justify-content: center;
@@ -83,6 +120,7 @@ body {
     overflow: hidden;
     height: 20%;
     width: 100%;
+    z-index: 0;
 }
 
 .slideshow img {
@@ -484,12 +522,14 @@ button:hover {
     height: calc(100%/8);
     width: calc(100%/3.3);
 }
-.toggletext{
+
+.toggletext {
     font-family: kalam;
     height: calc(100%/15);
     width: 100%;
     text-align: center;
 }
+
 .toggle:before {
     box-shadow: 0;
     border-radius: 84.5px;
@@ -538,114 +578,133 @@ button:hover {
     filter: blur(0.5px);
     box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4), inset 0 0px 15px -1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
 }
-.Normal{
+
+.Normal {
     color: black;
     border-color: #dcdcdc;
     background: #dcdcdc50;
     text-align: center;
 }
-.Fire{
+
+.Fire {
     color: black;
     border-color: #ff6900;
     background: #ff690050;
     text-align: center;
 }
-.Water{
+
+.Water {
     color: black;
     border-color: #14b9ff;
     background: #14b8ff50;
     text-align: center;
 }
-.Grass{
+
+.Grass {
     color: black;
     border-color: #b4f000;
     background: #b4f00050;
     text-align: center;
 }
-.Electric{
+
+.Electric {
     color: black;
     border-color: #ffe100;
     background: #ffe10050;
     text-align: center;
 }
-.Ice{
+
+.Ice {
     color: black;
-    border-color: #14f5ff;  
+    border-color: #14f5ff;
     background: #14f5ff50;
     text-align: center;
 }
-.Fighting{
+
+.Fighting {
     color: black;
     border-color: #dc6900;
     background: #dc690050;
     text-align: center;
 }
-.Poison{
+
+.Poison {
     color: black;
     border-color: #d28cd2;
     background: #d28cd250;
     text-align: center;
 }
-.Ground{
+
+.Ground {
     color: black;
     border-color: #fac85a;
     background: #fac85a50;
     text-align: center;
 }
-.Flying{
+
+.Flying {
     color: black;
     border-color: #78dcff;
     background: #78dcff50;
     text-align: center;
 }
-.Psychic{
+
+.Psychic {
     color: black;
     border-color: #f08cdc;
     background: #f08cdc50;
     text-align: center;
 }
-.Bug{
+
+.Bug {
     color: black;
     border-color: #46c846;
     background: #46c84650;
     text-align: center;
 }
-.Rock{
+
+.Rock {
     color: black;
     border-color: #b48c64;
     background: #b48c6450;
     text-align: center;
 }
-.Ghost{
+
+.Ghost {
     color: black;
     border-color: #a08cff;
     background: #a08cff50;
     text-align: center;
 }
-.Dragon{
+
+.Dragon {
     color: black;
     border-color: #5078dc;
     background: #5078dc50;
     text-align: center;
 }
-.Dark{
+
+.Dark {
     color: black;
     border-color: #787878;
     background: #78787850;
     text-align: center;
 }
-.Steel{
+
+.Steel {
     color: black;
     border-color: #aac8f0;
     background: #aac8f050;
     text-align: center;
 }
-.Fairy{
+
+.Fairy {
     color: black;
     border-color: #ffafdc;
     background: #ffafdc50;
     text-align: center;
 }
-#hide{
+
+#hide {
     display: none;
 }

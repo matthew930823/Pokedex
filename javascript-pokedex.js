@@ -19,18 +19,26 @@ function loadSpecies() {
     const speciesimg = document.getElementById('speciesimg');
     const speciesID = document.getElementById('speciesID');
     const speciesName = document.getElementById('speciesName');
+    const Previoushref=document.getElementById('Previous');
+    const Nexthref=document.getElementById('Next');
+    // const PreviousID = document.getElementById('PreviousID');
+    // const PreviousName = document.getElementById('PreviousName');
+    // const NextID = document.getElementById('NextID');
+    // const NextName = document.getElementById('NextName');
     const speciesHP = document.getElementById('HP');
     const speciesAttack = document.getElementById('Attack');
     const speciesDefense = document.getElementById('Defense');
     const speciesSpAttack = document.getElementById('SpAttack');
     const speciesSpDefense = document.getElementById('SpDefense');
     const speciesSpeed = document.getElementById('Speed');
+    const Total = document.getElementById('Total');
     const HPvalue = document.getElementById('HPvalue');
     const Attackvalue = document.getElementById('Attackvalue');
     const Defensevalue = document.getElementById('Defensevalue');
     const SpAttackvalue = document.getElementById('SpAttackvalue');
     const SpDefensevalue = document.getElementById('SpDefensevalue');
     const Speedvalue = document.getElementById('Speedvalue');
+    const Totalvalue = document.getElementById('Totalvalue');
     const speciesType = document.getElementById('type');
     const speciesWeakness = document.getElementById('weakness');
     const converter = OpenCC.Converter({ from: 'cn', to: 'hk' });
@@ -39,11 +47,18 @@ function loadSpecies() {
         fetch('https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/pokedex.json')
             .then(response => response.json())
             .then(data => {
+                const Previous=data[((speciesId - 2)==-1)?896:speciesId - 2];
                 const speciesDataItem = data[speciesId - 1];
+                const Next=data[(speciesId==897)?0:speciesId];
+                // PreviousID.innerHTML = Previous.id;
+                // PreviousName.innerHTML = converter(Previous.name.chinese);
+                // NextID.innerHTML = Next.id;
+                // NextName.innerHTML = converter(Next.name.chinese);
+                Previoushref.href='species.html?species='+(((speciesId - 2)==-1)?897:parseInt(speciesId)-1);
                 speciesimg.src = 'images/' + String(speciesId).padStart(3, "0") + '.png'
                 speciesID.innerHTML = speciesDataItem.id;
                 speciesName.innerHTML = converter(speciesDataItem.name.chinese);
-
+                Nexthref.href='species.html?species='+((speciesId==897)?1:(parseInt(speciesId)+1));
                 if (parseInt(speciesId) < 810) {
                     HP = speciesDataItem.base.HP;
                     Attack = speciesDataItem.base.Attack;
@@ -51,18 +66,20 @@ function loadSpecies() {
                     SpAttack = speciesDataItem.base['Sp. Attack'];
                     SpDefense = speciesDataItem.base['Sp. Defense'];
                     Speed = speciesDataItem.base.Speed;
-                    speciesHP.style.width = parseInt(HP) + "px";
+                    speciesHP.style.width = parseInt(HP)/2.55 + "%";
                     HPvalue.innerHTML = HP;
-                    speciesAttack.style.width = parseInt(Attack) + "px";
+                    speciesAttack.style.width = parseInt(Attack)/2.55 + "%";
                     Attackvalue.innerHTML = Attack;
-                    speciesDefense.style.width = parseInt(Defense) + "px";
+                    speciesDefense.style.width = parseInt(Defense)/2.55 + "%";
                     Defensevalue.innerHTML = Defense;
-                    speciesSpAttack.style.width = parseInt(SpAttack) + "px";
+                    speciesSpAttack.style.width = parseInt(SpAttack)/2.55 + "%";
                     SpAttackvalue.innerHTML = SpAttack;
-                    speciesSpDefense.style.width = parseInt(SpDefense) + "px";
+                    speciesSpDefense.style.width = parseInt(SpDefense)/2.55 + "%";
                     SpDefensevalue.innerHTML = SpDefense;
-                    speciesSpeed.style.width = parseInt(Speed) + "px";
+                    speciesSpeed.style.width = parseInt(Speed)/2.55 + "%";
                     Speedvalue.innerHTML = Speed;
+                    Total.style.width = (parseInt(HP)+parseInt(Attack)+parseInt(Defense)+parseInt(SpAttack)+parseInt(SpDefense)+parseInt(Speed))/7.2 + "%";
+                    Totalvalue.innerHTML=parseInt(HP)+parseInt(Attack)+parseInt(Defense)+parseInt(SpAttack)+parseInt(SpDefense)+parseInt(Speed);
                 }
                 else {
                     find1(speciesId)
@@ -73,18 +90,20 @@ function loadSpecies() {
                             SpAttack = li[3];
                             SpDefense = li[4];
                             Speed = li[5];
-                            speciesHP.style.width = parseInt(HP) + "px";
+                            speciesHP.style.width = parseInt(HP)/2.55 + "%";
                             HPvalue.innerHTML = HP;
-                            speciesAttack.style.width = parseInt(Attack) + "px";
+                            speciesAttack.style.width = parseInt(Attack)/2.55 + "%";
                             Attackvalue.innerHTML = Attack;
-                            speciesDefense.style.width = parseInt(Defense) + "px";
+                            speciesDefense.style.width = parseInt(Defense)/2.55 + "%";
                             Defensevalue.innerHTML = Defense;
-                            speciesSpAttack.style.width = parseInt(SpAttack) + "px";
+                            speciesSpAttack.style.width = parseInt(SpAttack)/2.55 + "%";
                             SpAttackvalue.innerHTML = SpAttack;
-                            speciesSpDefense.style.width = parseInt(SpDefense) + "px";
+                            speciesSpDefense.style.width = parseInt(SpDefense)/2.55 + "%";
                             SpDefensevalue.innerHTML = SpDefense;
-                            speciesSpeed.style.width = parseInt(Speed) + "px";
+                            speciesSpeed.style.width = parseInt(Speed)/2.55 + "%";
                             Speedvalue.innerHTML = Speed;
+                            Total.style.width = (parseInt(HP)+parseInt(Attack)+parseInt(Defense)+parseInt(SpAttack)+parseInt(SpDefense)+parseInt(Speed))/7.2 + "%";
+                            Totalvalue.innerHTML=parseInt(HP)+parseInt(Attack)+parseInt(Defense)+parseInt(SpAttack)+parseInt(SpDefense)+parseInt(Speed);
                         })
                         .catch(error => console.error('Error:', error));
 
@@ -93,16 +112,16 @@ function loadSpecies() {
                 var pokemonWeaknesses = getWeakness(speciesDataItem.type);
                 //console.log(speciesDataItem.type.length);
                 for (var i = 0; i < speciesDataItem.type.length; i++) {
-                    if (i >= 1) {
-                        speciesType.innerHTML += ' , ';
+                    if (i >= 0) {
+                        speciesType.innerHTML += '   ';
                     }
-                    speciesType.innerHTML += speciesDataItem.type[i];
+                    speciesType.innerHTML += '<span class="typebox_word '+speciesDataItem.type[i]+'">'+speciesDataItem.type[i]+'</span> ';
                 }
                 for (var i = 0; i < pokemonWeaknesses.length; i++) {
-                    if (i >= 1) {
-                        speciesWeakness.innerHTML += ' , ';
+                    if (i >= 0) {
+                        speciesWeakness.innerHTML += '   ';
                     }
-                    speciesWeakness.innerHTML += pokemonWeaknesses[i];
+                    speciesWeakness.innerHTML += '<span class="typebox_word '+pokemonWeaknesses[i]+'">'+pokemonWeaknesses[i]+'</span> ';
                 }
             })
             .catch(error => console.error('Error:', error));
